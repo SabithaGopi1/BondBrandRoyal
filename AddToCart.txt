@@ -1,0 +1,51 @@
+Package com.Automationpracticepages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Support.FindBy;
+import.org.openqa.selenium.Support.PageFactory;
+
+Public class AddToCartPage{
+@FindBy(xpath='//*[@id=\"homefeatured\"]/li[2]/div[1]/div/a[1]/img")
+WebElement itemImage;
+
+@FindBy(xpath="//*[@id=\"homefeatured\"]/li[2]/div/div[2]/div[20/a[20")
+WebElement btnMore;
+
+@FindBy(xpath="//*[@id=\"quantity-Wanted\"]")
+WebElement txtQuantity;
+
+@FindBy(xpath="//*[@id=\"group_1\"]")
+WebElement Selectsize;
+
+@FindBy(xpath="//*[@id=\"add_to_cart\"]/button")
+WebElement btnAddToCart;
+
+@FindBy(css="div#layer_cart a>span")
+webElement btncheckout;
+@FindBy(xpath="//*[@id=\"header\"}/div[3]/div/div/div[3]/div/a/span[1]")
+
+
+
+SeleniumImplementation Selenium;
+Public AddToCartPage(WebDriver driver){
+PageFactory.initElements(driver,this);
+Selenium=new SeleniumImplementation;
+
+
+Public boolean Validate AddToCart(WebDriver driver){
+
+Selenium.performMouseHower(itemImage, driver);
+Selenium.click(btnMore);
+Selenium.clear(txtQuantity);
+Selenium.SetText("3", txtQuantity);
+Selenium.selectByVisiblText(Selectsize,"M");
+Selenium.clickUsingJavaScriptExecutor(btnCheckout,driver);
+Selenium.refresh(driver);
+
+return Selenium.ValidateText(driver,CartText,"3");
+
+
+
+
+

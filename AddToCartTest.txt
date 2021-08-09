@@ -1,0 +1,53 @@
+Package com.automationpractice.test;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterTest;
+import org.openqa.selenium.chrome.chromedriver;
+import org.testng.Assert;
+
+Public class AddToCartTest{
+Webdriver driver;
+AddToCartPage Page;
+
+@BeforeTest
+Public void Setup(){
+System.setProperty("Webdriver.Chrome.driver","c:\\Drivers\\ChromeDriver.exe");
+
+driver= new ChromeDriver();
+driver.get("http/;//automationpractice.com/index.php");
+
+driver.manage().Window().maximize();
+Page=new AddToCartPage(driver);
+}
+
+@Test
+Public void ValidateAddToCart(){
+Assert.assertTrue(Page.ValidateAddToCart(driver));
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
