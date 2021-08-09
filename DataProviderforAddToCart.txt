@@ -1,0 +1,31 @@
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+Public class DataProviderclass{
+
+/* This method takes data as input Parameters.The attribute dataprovider is mapped to "getData" */
+
+@Test(dataProvider="getData")
+
+/* no.of coulmns should match the no.of input parameters */
+
+Public void loginTest(String Uid, String Pwd);
+{
+
+    System.out.Println("username is" + uid);
+    System.out.Println("Password is" + Pwd);
+
+//A dataprovider returns an array of Objects
+
+@DataProvider(name="getData");
+Public Object[][]getData(){
+
+Object[][]data=newObject[2][2];
+data[0][0]="FirstUid";
+data[0][1]="FirstPWD";
+data[1][0]="SecondUid";
+data[1][1]="SecondPwd";
+
+return data;
+    }
+}
