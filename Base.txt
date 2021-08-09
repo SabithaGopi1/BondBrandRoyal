@@ -1,0 +1,26 @@
+Package TestNGListenerConcept;
+import java.io.File;
+import org.openqa.Selenium.WebDriver;
+/* Added Testmethod Name and the location to take the screenshots of the failed testcases separately in the screenshot folder.*/
+Public Class Base{
+Public static WebDriver driver;
+Public static void Initialization(){
+System.setProperty('WebDriver.Chromedriver","c\\selenium\documents\chromedriver.exe");
+driver=new ChromeDriver();
+driver.get("http://www.google.com");
+}
+
+public void Failed(String testMethodName){
+File srcFile=((TakesScreenshots)driver).getScreenshotAs(OUTPUTType.FILE);
+
+try{
+FileUtils.COPUFile(srcFile,newFile("//Users/Selenium/Documents/workspace"+"May/Screenshots/"+"Failshot_"+testMethodName+
+"_"+".jpg"));
+}
+
+Catch(IOException e){
+
+e.printStackTrace();
+   }
+
+}

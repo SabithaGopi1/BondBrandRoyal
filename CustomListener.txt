@@ -1,0 +1,13 @@
+Package TestNGListener
+
+import org.openqa.selenium.By;
+
+Public class CustomListener extends Base implements ITestListener{
+
+@Override
+Public void onTestFailure(ITestResult result){
+
+System.out.println("Failed Test");
+
+failed(result.getMethod().getMethodName());
+}
