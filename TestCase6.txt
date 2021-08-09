@@ -1,0 +1,23 @@
+1)Create--New Collection--DemoAPIS
+2)Copy the url--> go to the Collections DemoAPIS--> click on Post Request--> Paste the URL  https://reqres.in/api/users
+3)Go To Body Section-->Click on Raw--> Text button will be Enabled-->Select Json--> Paste the Request Payload
+4)Click on Send button
+5)In the Response, along with the Request Payload, Id and Creation Date will be created for this call.
+6)statuscode 201 will be created.
+7)Add the Test Validations:
+
+
+
+
+Post Request:
+ https://reqres.in/api/users
+
+
+
+Response:
+{
+    "name": "morpheus",
+    "job": "leader",
+    "id": "777",
+    "createdAt": "2021-08-09T06:19:59.099Z"
+}
